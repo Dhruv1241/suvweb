@@ -1,0 +1,27 @@
+.trusted-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.trusted-logo{
+    /* margin-top: 50px; */
+    width: 70%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    justify-content: space-around;
+}
+.trusted-logo-img img{
+    /* padding: 10px; */
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
+.trusted-heading{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}

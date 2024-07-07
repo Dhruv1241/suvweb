@@ -1,0 +1,49 @@
+.contactContainer{
+    width: 100%;
+    /* background-color: aqua; */
+}
+.contact-heading{
+    /* width: 100%; */
+    /* background-color: red; */
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.form{
+    /* background-color: green; */
+    width: 40%;
+    margin: 50px auto;
+    height: 300px;
+    align-items: center;
+}
+.form-div{
+    width: 100%;
+    /* background-color: yellow; */
+}
+
+.form-manager{
+    width: 100%;
+    /* background-color: orange; */
+}
+.form-manager input{
+    width: 98%;
+    margin-top: 3px;
+    font-size: 13px;
+    padding: 3px;
+    /* background-color: purple; */
+}
+.text-area{
+    height: 18vh;
+}
+.contact-btn{
+    width: 20%;
+    padding: 5px;
+    font-size: 15px;
+    margin-top: 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: blue;
+}

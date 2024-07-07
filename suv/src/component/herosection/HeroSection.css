@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.hero-container{
+    width: 40%;
+    display: flex;
+    /* background-color: red; */
+}
+.section p{
+    /* font-family: sans-serif; */
+    opacity: 0.5;
+    font-size: 20px;
+}
+.navlink button{
+    width: 120px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    font-size: 22px;
+    border: none;
+    padding: 5px;
+}
+.section-img img{
+    width: 350px;
+    height: 250px;
+}
