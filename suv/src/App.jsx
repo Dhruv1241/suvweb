@@ -8,6 +8,7 @@ import Product from "./component/page/Product";
 import Header from "./component/Header/Header";
 import Footer from "./component/Header/Footer";
 import ErrorPage from "./component/page/ErrorPage";
+import FeatureData from "./component/page/FeatureData";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/product" element={<Product />} />
           <Route path="*" element={<ErrorPage />} />
+          <Route path="feature" element={<FeatureData />} />
         </Routes>
         <Footer />
       </BrowserRouter>

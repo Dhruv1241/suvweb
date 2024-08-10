@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import shop from "../../assets/images.jpeg";
 import "./HeroSection.css";
+import FeatureData from "../page/FeatureData";
 export default function HeroSection({ data }) {
   const { name } = data;
+  
   return (
     <div className="main">
       <div className="hero-container">
@@ -27,6 +29,7 @@ export default function HeroSection({ data }) {
       <div className="section-img">
         <img src={shop} alt="" />
       </div>
+      <FeatureData/>
     </div>
   );
 }

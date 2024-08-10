@@ -1,34 +1,42 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { useEffect } from "react";
-export const fetchalldata = createAsyncThunk("data", async () => {
-  const res = await fetch("https://api.pujakaitem.com/api/products")
-  return res.json();
-});
+import { createSlice } from "@reduxjs/toolkit";
 
 
-export const Fetchdata = createSlice({
-  name: "data",
-  initialstate: {
-    isLoading: false,
-    data: [],
-    error: false,
+const Fetchdata = createSlice({
+  name:"product",
+  initialState :{
+    product : [],
+    isLoading:false,
+    error:null
   },
-  extraReducers: (builder) => {
-    builder.addCase(fetchalldata.fulfilled, (state, action) => {
+  reducers:{
+    getAllProductsRequest(state, action){
+      state.isLoading= true;
+      state.product = []
+    },
+    getAllProductsSuccess(state, action){
       state.isLoading = false;
-      state.data = action.payload
-      
-    });
-    builder.addCase(fetchalldata.pending, (state) => {
-        state.isLoading = true;
-        
-      });
-      builder.addCase(fetchalldata.rejected, (state, action) => {
-        console.log('error', action.payload )
-        state.error = true
-      });
-      
-  },
+      state.product = action.payload
+    },
+    getAllProductFailure(state, action){
+      state.isLoading = false;
+      state.error = action.payload
+    }
+  }
 });
+
+
+export const getAllProducts = ()=> async (dispatch)=>{
+  dispatch(Fetchdata.actions.getAllProductsRequest());
+  try{
+    const response = await fetch("https://api.pujakaitem.com/api/products");
+    const data = await response.json();
+    // console.log("data is ", data);
+    dispatch(Fetchdata.actions.getAllProductsSuccess(data))
+  }catch(err){
+    console.log("err is ", err);
+    dispatch(Fetchdata.actions.getAllProductFailure(err.response.data.message));
+  }
+}
+
 
 export default Fetchdata.reducer;

@@ -1,11 +1,14 @@
-import {configureStore} from '@reduxjs/toolkit'
-import Fetchdata from './Slices/Fetchdata';
-
-export const store = configureStore({
+import {configureStore} from '@reduxjs/toolkit';
+import FetchDataReducer from "./Slices/Fetchdata";
+import cartReducer from "./Slices/cartSlice";
+import Feature from './Slices/Feature';
+const store = configureStore({
     reducer:{
-        Alldata: Fetchdata
-    }
- })
+        Fetchdata: FetchDataReducer,
+        cart: cartReducer,
+        feature: Feature
+        
+    },
+ });
 
- export const FetchAction = Alldata.actions;
  export default store;
