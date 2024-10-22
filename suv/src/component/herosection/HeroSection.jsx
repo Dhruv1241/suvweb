@@ -7,6 +7,7 @@ export default function HeroSection({ data }) {
   const { name } = data;
   
   return (
+    <>
     <div className="main">
       <div className="hero-container">
         <div className="section">
@@ -29,7 +30,8 @@ export default function HeroSection({ data }) {
       <div className="section-img">
         <img src={shop} alt="" />
       </div>
-      <FeatureData/>
     </div>
+      <FeatureData/>
+    </>
   );
 }

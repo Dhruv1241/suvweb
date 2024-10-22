@@ -33,8 +33,8 @@ export default function Product() {
         <div className="card" key={item.id}>
           <div className="img-div">
           <img src={item.image} alt={item.name}/>
+          <button onClick={() => addToTheCart(item.id)} className='addtocardproduct'>Add to Cart</button>
           </div>
-          <button onClick={() => addToTheCart(item.id)}>Add to Cart</button>
         </div>
       ))}
       </div>

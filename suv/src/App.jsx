@@ -9,6 +9,7 @@ import Header from "./component/Header/Header";
 import Footer from "./component/Header/Footer";
 import ErrorPage from "./component/page/ErrorPage";
 import FeatureData from "./component/page/FeatureData";
+import SingleProduct from "./component/page/SingleProduct";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="feature" element={<FeatureData />} />
+          <Route path="singleproduct/:id" element={<SingleProduct />} />
         </Routes>
         <Footer />
       </BrowserRouter>

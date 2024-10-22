@@ -1,24 +1,26 @@
 import { useEffect } from "react";
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
+import FeatureProduct from "./FeatureProduct";
 import { featureproduct } from "../store/Slices/Feature";
+import './FeatureData.css'
 export default function FeatureData(){
     const dispatch = useDispatch()
 
     useEffect(()=>{
         dispatch(featureproduct())
-    },[])
+    },[dispatch])
 
-    const {Fetureproduct} = useSelector(state => state.feature)
-    console.log('feature is', Fetureproduct)
+    const {featureprod} = useSelector(state => state.feature)
+    // console.log('Feature state:', useSelector(state => state.feature));
+    // console.log('feature is', featureprod)   
     return (
-        <div>
-            hello i am feature
-            {/* {Fetureproduct && Fetureproduct.map(item=>(
-                <div key={item.id}>
-                    <img src={item.image} alt="" />
-                </div>
-            ))} */}
-        </div>
+        <div className="feature-container-image">
+            
+            {featureprod.map((curr)=>{
+                return <FeatureProduct key={curr.id} {...curr}/>
+            })}
+        </div>  
+        
     )
 }
