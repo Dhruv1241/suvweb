@@ -9,7 +9,7 @@ import Header from "./component/Header/Header";
 import Footer from "./component/Header/Footer";
 import ErrorPage from "./component/page/ErrorPage";
 import FeatureData from "./component/page/FeatureData";
-import SingleProduct from "./component/page/SingleProduct";
+import SingleProduct from "./component/page/SingleProduct"
 
 function App() {
   return (

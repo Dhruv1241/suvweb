@@ -1,0 +1,44 @@
+.single-product-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20PX;
+    /* background-color: red; */
+}
+.single-product-manager{
+    width: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.images{
+    /* width: 100%; */
+    background-color: red;
+}
+.product-data{
+    /* margin-top: 20PX;    */
+    width: 40%;
+    padding: 10px;  
+    background-color: burlywood; 
+}
+.product-waranty{
+    margin-top: 20PX;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: blue; */
+}
+.ser-icn{
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+p{
+    margin-top: 15PX;
+}
+span{
+    font-weight: bold;
+}

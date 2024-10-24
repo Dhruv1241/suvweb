@@ -1,0 +1,19 @@
+.single-product-images {
+    display: grid;
+    /* display: flex; */
+    grid-template-rows: repeat(4, 1fr); /* 4 rows, each of equal height */
+    gap: 10px; /* Optional: Adds space between images */
+    width: 200px;
+}
+
+.single-product-images img {
+    width: 100%; /* Makes each image fit the grid cell */
+    height: auto; /* Keeps aspect ratio */
+}
+
+.product-screen2 .image2 {
+    display: grid;
+    /* display: flex; */
+    grid-template-columns: 1fr; /* 1 column */
+    width: 200px;
+}

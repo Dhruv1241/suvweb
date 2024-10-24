@@ -32,7 +32,7 @@ export const featureproduct =()=> async (dispatch)=>{
     try{
         const response = await fetch("https://api.pujakaitem.com/api/products");
         const data = await response.json();
-        // console.log("data is ", data);
+        console.log("data is ", data);
         const featureData = data.filter((product) => product.featured === true);
         // console.log('featured data is', featureData)
 
